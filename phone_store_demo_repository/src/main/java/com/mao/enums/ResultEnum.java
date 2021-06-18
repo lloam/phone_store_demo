@@ -1,0 +1,24 @@
+package com.mao.enums;
+
+import lombok.Getter;
+
+/**
+ * Author: Administrator
+ * Date: 2021/6/16 20:39
+ * Description:
+ */
+@Getter
+public enum ResultEnum {
+    PHONE_STOCK_ERROR(0,"手机库存不足"),
+    ORDER_NOT_EXIST(1,"订单不存在"),
+    SPECS_NOT_EXIST(2,"规格不存在"),
+    PHONE_NOT_EXIST(3,"手机不存在"),
+    ORDER_IS_PAID(4,"订单已支付");
+    private Integer code;
+    private String msg;
+
+    ResultEnum(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+}
